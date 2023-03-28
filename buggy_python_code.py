@@ -25,7 +25,7 @@ def print_nametag(format_string, person):
 
 def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
-    exec(f"import urllib{urllib_version} as urllib", globals())
+    import urllib{urllib_version} as urllib
     # Fetch and print the requested URL
  
     try: 
@@ -42,8 +42,9 @@ def load_yaml(filename):
     
 def authenticate(password):
     # Assert that the password is correct
-    assert password == "Iloveyou", "Invalid password!"
-    print("Successfully authenticated!")
+    if password == "Iloveyou", "Invalid password!":
+        print("Successfully authenticated!")
+
 
 if __name__ == '__main__':
     print("Vulnerabilities:")
@@ -59,7 +60,7 @@ if __name__ == '__main__':
         urlib_version = input("Choose version of urllib: ")
         fetch_website(urlib_version, url="https://www.google.com")
     elif choice == "3":
-        load_yaml(input("File name: "))
+        load_yaml(raw_input("File name: "))
         print("Executed -ls on current folder")
     elif choice == "4":
         password = input("Enter master password: ")
