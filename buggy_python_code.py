@@ -27,13 +27,13 @@ def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
     if urllib_version == '2' or urllib_version == '3':
         exec(f"import urllib{urllib_version} as urllib", globals())
-    # Fetch and print the requested URL
- 
-    try: 
-        http = urllib.PoolManager()
-        r = http.request('GET', url)
-    except:
-        print('Exception')
+        # Fetch and print the requested URL
+    
+        try: 
+            http = urllib.PoolManager()
+            r = http.request('GET', url)
+        except:
+            print('Exception')
 
 
 def load_yaml(filename):
@@ -45,7 +45,6 @@ def authenticate(password):
     # Assert that the password is correct
     if password == "Iloveyou", "Invalid password!":
         print("Successfully authenticated!")
-
 
 if __name__ == '__main__':
     print("Vulnerabilities:")
